@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="jyp.css">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/icon.png"/>
+       <title>Pledis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fira+Sans+Extra+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+      <div class="slide-container">
+        <video autoplay muted loop>
+          <source src="/assets/video/v4.mp4" type="video/mp4">       
+        </video>
+        <div class="video-title">
+          <h1>IU<br>CELEBRITY</h1>
+          <div class="myProgress">
+            <div class="myBar"></div>
+          </div>
+        </div>
+      </div>
+        <div class="slide-container">
+          <video autoplay muted loop>
+            <source src="/assets/video/vid1.mp4" type="video/mp4">       
+          </video>
+          <div class="video-title">
+            <h1>SEVENTEEN<br>Don't wanna cry</h1>
+            <div class="myProgress">
+              <div class="myBar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-container">
+          <video autoplay muted loop>
+            <source src="/assets/video/vid2.mp4" type="video/mp4">       
+          </video>
+          <div class="video-title">
+            <h1>SEVENTEEN<br><strong>Darl+ing<strong></h1>
+              <div class="myProgress">
+                <div class="myBar"></div>
+              </div>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        <div class="wrap-container">
+          <div class="header">
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="">
+            </div>
+            <div class="menu" >
+              <div class="line"></div>
+              <div class="company">
+                <ul>
+                  <li>COMPANY</li>
+                  <li><a href="cpn.html">ABOUT PLEDIS</a></li>
+                  <li>HISTORY</li>
+                  <li>NOTICE</li>
+                  <li>CONTACT</li>
+                </ul>
+              </div>
+              <div class="artist">
+                <ul>
+                  <li>ARTIST</li>
+                  <li><a href="artist.html">ARTIST</a></li>
+                  <li><a href="album.html">ALBUM</a></li>
+                  <li><a href="video.html">VIDEO</a></li>
+                </ul>
+              </div>
+              <div class="audition">
+                <ul>
+                  <li>AUDITION</li>
+                </ul>
+              </div>
+            </div>
+            <div class="link">
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fas fa-bars" onclick="showMenu()"></i>
+            </div>                        
+    </div>
+        </div>
+        </div>
+    <div class="note" style="left:0;">
+          <ul>
+            <li><u>IRDATA</u></li>
+            <li>2023.05.15</li>
+            <li>FY23 Q1 IR Result</li>
+          </ul>
+        </div>
+    <div class="note" style="right:0;">
+          <ul>
+            <li><strong>PRIVACY POLICY</strong></li>
+            <li>FAMILY</li>
+            <li>PLEDIS ENTERTAINMENT CORP</li>
+          </ul>
+    </div>
+    </div>
+</body>
+<script>
+let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        } 
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("slide-container");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slides[slideIndex-1].style.display = "block";  
+        }
+var menu = document.querySelector(".menu");
+var link = document.querySelector(".link");
+var linkIcon = link.querySelectorAll("i");
+console.log(linkIcon);
+var bars = document.querySelector(".fa-bars");
+function showMenu(){
+
+  if (menu.style.display==="none"){
+  menu.style.display="flex";
+  bars.className="fas fa-times";
+  bars.style.color="#000";
+  } else {
+    menu.style.display="none";
+    bars.className = "fas fa-bars";
+    for (var i=0; i<linkIcon.length;i++){
+   linkIcon[i].style.color="#fff";
+  };
+  };
+  consolr.log(linkIcon);
+};
+</script>
+</html>
